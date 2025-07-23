@@ -65,7 +65,7 @@ nav > a:hover, aside > ul > li > a:hover {
 
 main, aside {
     background-color: var(--cor-branca);
-    padding: 10px;
+    padding: 3px;
     min-width: 300px;
     max-width: 1000px;
     line-height: 2em;
@@ -86,7 +86,7 @@ h2 {
 
 p , li > p {
     font-family: var(--fonte-paragrafo);
-    text-indent: 30px;
+    text-indent: 20px;
     margin: 15px;
 }
 
@@ -100,18 +100,18 @@ h3 {
     margin: 20px 0px 20px 10px;
 }
 
-div.h2 {
+div.grid-flex {
     display: grid;
     grid-auto-columns: auto;
     grid-auto-rows: auto;
     align-items: center;
 }
 
-div.h2 > p {
+div.grid-flex > p {
     grid-area: 1 / 1 / 3 / 2;
 }
 
-div.h2 > img {
+div.grid-flex > img {
     grid-area: 1 / 2 / 3 / 3;
     padding: 10px;
 }
@@ -122,15 +122,16 @@ aside {
 
 aside > h3 {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    background-color: var(--cabecalho-e-gostou);
-    color: var(--cor-branca);
+    color: var(--cor-preta);
     border-radius: 10px 10px 0px 0px;
+    padding: 0;
 }
 
 aside > ul {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 10px;
 }
 
 footer {
@@ -149,3 +150,23 @@ p.cc, p.cc > a {
     font-size: 14px;
     color: black;
 }
+
+@media screen and (max-width: 600px) {
+    header {
+        display: flex;
+        flex-flow: column;
+    }
+
+    div.grid-flex {
+        display: flex;
+        flex-flow: column;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    div.grid-flex {
+        display: flex;
+        flex-flow: column;
+    }
+}
+
