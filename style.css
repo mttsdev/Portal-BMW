@@ -24,8 +24,6 @@ body {
     --fonte-subtitulo: 'Poppins', 'sans-serif';
 }
 
-
-
 header {
     height: 150px;
     background-color: var(--cabecalho-e-gostou);
@@ -76,7 +74,7 @@ div.jcsb > a.pbmw, aside > ul > li > a {
     border-radius: 8px;
 }
 
-header > a.pbmw:hover, div > ul > li > a:hover, aside > ul > li > a:hover {
+header > div.jcsb > a.pbmw:hover, div > ul > li > a:hover, aside > ul > li > a:hover {
     color: rgb(156, 156, 156);
     transition: color .5s;
 }
@@ -99,8 +97,25 @@ main > h1 {
     border-radius: 8px;
 }
 
-img {
-    max-width: 300px;
+main > div.topico {
+    border: 1px solid black;
+    min-width: 200px;
+    max-width: 500px;
+    text-align: center;
+    margin: auto;
+}
+
+main > div.topico > ol > li {
+    list-style-type: none;
+}
+
+main > div.topico > ol > li > a {
+    text-decoration: none;
+}
+
+main > div.topico > ol > li > a:hover {
+    text-decoration: underline;
+
 }
 
 h2 {
@@ -109,6 +124,12 @@ h2 {
     margin: 20px 0px 20px 10px;
     background-image: var(--gradient-subt);
 }
+
+img {
+    max-width: 300px;
+}
+
+
 
 p , li > p {
     font-family: var(--fonte-principal);
@@ -126,12 +147,12 @@ h3 {
     margin: 20px 0px 20px 10px;
 }
 
-/* div.grid-flex {
+div.grid-flex {
     display: grid;
     grid-auto-columns: auto;
     grid-auto-rows: auto;
     align-items: center;
-} */
+}
 
 /* div.grid-flex > p {
     grid-area: 1 / 1 / 3 / 2;
