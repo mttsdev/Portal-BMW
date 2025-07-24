@@ -12,6 +12,8 @@ body {
     background-color: lightgray;
 }
 
+
+
 :root {
     --cor-preta: #000000;
     --cor-subtitulo: #0000FF;
@@ -22,12 +24,20 @@ body {
     --fonte-subtitulo: 'Poppins', 'sans-serif';
 }
 
+
+
 header {
-    display: grid;
-    height: 100px;
+    height: 150px;
     background-color: var(--cabecalho-e-gostou);
-    align-items: center;
+    display: grid;
+    grid-template-rows: 18px;
 }
+
+header > div.navegacao > ul {
+    display: flex;
+    gap: 30px;
+}
+
 
 header > div > ul > li > a{
     color: #fff;
@@ -39,24 +49,26 @@ header > div > ul > li > a.a1 {
     margin-left: 1vw;
 }
 
-header > h1 {
-    color: white;
-    font-family: var(--fonteprincipal);
-    text-shadow: 1px 1px 2px black;
-    font-size: 30px;
-    border-radius: 8px;
-}
-
-header > a.pbmw {
-    justify-self: center;
-}
-
-ul {
+header > div.jcsb {
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header > a, aside > ul > li > a {
+div.menu {
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 18px;
+  background-color: rgb(114, 114, 114);
+  margin: 0 12px;
+}
+
+div.jcsb > a.pbmw, aside > ul > li > a {
     background-color: var(--cor-preta);
     color: var(--cor-branca);
     text-decoration: none;
@@ -64,9 +76,9 @@ header > a, aside > ul > li > a {
     border-radius: 8px;
 }
 
-header > a:hover, div ul > li > a:hover, aside > ul > li > a:hover {
+header > a.pbmw:hover, div > ul > li > a:hover, aside > ul > li > a:hover {
     color: rgb(156, 156, 156);
-    transition: .5s;
+    transition: color .5s;
 }
 
 main, aside {
@@ -77,6 +89,14 @@ main, aside {
     line-height: 2em;
     margin: auto;
     text-align: justify;
+}
+
+main > h1 {
+    color: white;
+    font-family: var(--fonteprincipal);
+    text-shadow: 1px 1px 2px black;
+    font-size: 30px;
+    border-radius: 8px;
 }
 
 img {
@@ -106,21 +126,21 @@ h3 {
     margin: 20px 0px 20px 10px;
 }
 
-div.grid-flex {
+/* div.grid-flex {
     display: grid;
     grid-auto-columns: auto;
     grid-auto-rows: auto;
     align-items: center;
-}
+} */
 
-div.grid-flex > p {
+/* div.grid-flex > p {
     grid-area: 1 / 1 / 3 / 2;
 }
 
 div.grid-flex > img {
     grid-area: 1 / 2 / 3 / 3;
     padding: 10px;
-}
+} */
 
 aside {
     border-radius: 0px 0px 10px 10px;
@@ -158,22 +178,10 @@ p.cc, p.cc > a {
 }
 
 @media screen and (max-width: 768px) {
-    div.grid-flex {
+    /* div.grid-flex {
         display: flex;
         flex-flow: column;
-    }
+    } */
     
 }
 
-@media screen and (max-width: 640px) {
-    header {
-    display: flex;
-    flex-flow: column;
-    height: 150px;
-    }
-    
-    div {
-        display: flex;
-        flex-flow: row;
-    }
-}
