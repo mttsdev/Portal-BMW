@@ -139,12 +139,14 @@ div.grid-flex > p {
 }
 
 div.grid-flex > img {
-    grid-area: 1 / 2 / 3 / 3;
+    grid-area: 1 / 2 / 2 / 3;
     padding: 10px;
 }
 
-div.grid-flex {
-    grid-area: 3 / 2 / 4 / 3;
+div.grid-flex > figure.cc {
+    width: 300px;
+    grid-area: 2 / 2 / 3 / 3;
+    margin: auto;
 }
 
 aside {
@@ -176,8 +178,7 @@ footer a {
     color: black;
 }
 
-p.cc, p.cc > a {
-    font-size: 14px;
+div.grid-flex > figure.cc > figcaption > a {
     color: black;
 }
 
