@@ -10,6 +10,7 @@
 body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     background-color: var(--fundo);
+    min-width: 300px;
 }
 
 
@@ -29,11 +30,12 @@ header {
     background-color: var(--cabecalho-e-rodape);
     display: grid;
     grid-template-rows: 18px;
+    
 }
 
 header > div.navegacao > ul {
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 
@@ -77,6 +79,14 @@ div.header-center > a.portal, aside > ul > li > a {
 header > div.header-center > a.portal:hover, div > ul > li > a:hover, aside > ul > li > a:hover {
     color: rgb(156, 156, 156);
     transition: color .5s;
+}
+
+.input {
+    min-width: 100px;
+    max-width: 200px;
+    margin-left: 3px;
+    margin-right: 3px;
+    height: 30px;
 }
 
 main, aside {
@@ -180,6 +190,21 @@ footer a {
 
 div.grid-flex > figure.cc > figcaption > a {
     color: black;
+}
+
+@media screen and (max-width: 370px) {
+
+    header > div.header-center > a.portal:hover {
+        text-align: center;
+    }
+
+    header > div > ul > li > a.a1 {
+    margin-left: 0vw;
+    }
+
+    div.menu {
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 768px) {
