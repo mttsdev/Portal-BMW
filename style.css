@@ -149,13 +149,13 @@ div.grid-flex > p {
 }
 
 div.grid-flex > img {
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1 / 2 / 3 / 3;
     padding: 10px;
 }
 
 div.grid-flex > figure.cc {
     width: 300px;
-    grid-area: 2 / 2 / 3 / 3;
+    grid-area: 1 / 2 / 3 / 3;
     margin: auto;
 }
 
