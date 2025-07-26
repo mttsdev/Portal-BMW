@@ -9,24 +9,24 @@
 
 body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    background-color: lightgray;
+    background-color: var(--fundo);
 }
 
 
 
 :root {
-    --cor-preta: #000000;
-    --cor-subtitulo: #0000FF;
+    --fundo: lightgray;
+    --texto: #000000;
+    --cor-subtitulo: #093366;
     --cor-branca: #fff;
-    --cabecalho-e-gostou: rgb(88, 88, 88);
-    --gradient-subt: linear-gradient(to right, rgb(156, 156, 156), white);
-    --fonte-principal: 'Roboto', 'sans-serif';
+    --cabecalho-e-rodape: rgb(88, 88, 88);
+    --fonte-titulo: 'Roboto', 'sans-serif';
     --fonte-subtitulo: 'Poppins', 'sans-serif';
 }
 
 header {
     height: 150px;
-    background-color: var(--cabecalho-e-gostou);
+    background-color: var(--cabecalho-e-rodape);
     display: grid;
     grid-template-rows: 18px;
 }
@@ -47,7 +47,7 @@ header > div > ul > li > a.a1 {
     margin-left: 1vw;
 }
 
-header > div.jcsb {
+header > div.header-center {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,15 +66,15 @@ div.menu {
   margin: 0 12px;
 }
 
-div.jcsb > a.pbmw, aside > ul > li > a {
-    background-color: var(--cor-preta);
+div.header-center > a.portal, aside > ul > li > a {
+    background-color: black;
     color: var(--cor-branca);
     text-decoration: none;
     padding: 8px;
     border-radius: 8px;
 }
 
-header > div.jcsb > a.pbmw:hover, div > ul > li > a:hover, aside > ul > li > a:hover {
+header > div.header-center > a.portal:hover, div > ul > li > a:hover, aside > ul > li > a:hover {
     color: rgb(156, 156, 156);
     transition: color .5s;
 }
@@ -83,35 +83,38 @@ main, aside {
     background-color: var(--cor-branca);
     padding: 3px;
     min-width: 300px;
-    max-width: 1000px;
+    max-width: 850px;
     line-height: 2em;
     margin: auto;
     text-align: justify;
 }
 
-main > h1 {
-    color: white;
-    font-family: var(--fonteprincipal);
-    text-shadow: 1px 1px 2px black;
-    font-size: 30px;
+h1 {
+    color: var(--cor-subtitulo);
+    text-align: center;
+    padding-top: 20px;
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    font-size: 40px;
     border-radius: 8px;
+}
+
+p , li > p {
+    font-family: var(--fonte-titulo);
+    text-indent: 20px;
+    margin: 15px;
 }
 
 h2 {
     font-family: var(--fonte-subtitulo);
     font-weight: 600;
+    color: var(--cor-subtitulo);
     margin: 20px 0px 20px 10px;
     background-image: var(--gradient-subt);
 }
 
 img {
     max-width: 300px;
-}
-
-p , li > p {
-    font-family: var(--fonte-principal);
-    text-indent: 20px;
-    margin: 15px;
 }
 
 ul > li {
@@ -131,14 +134,18 @@ div.grid-flex {
     align-items: center;
 }
 
-/* div.grid-flex > p {
+div.grid-flex > p {
     grid-area: 1 / 1 / 3 / 2;
 }
 
 div.grid-flex > img {
     grid-area: 1 / 2 / 3 / 3;
     padding: 10px;
-} */
+}
+
+div.grid-flex {
+    grid-area: 3 / 2 / 4 / 3;
+}
 
 aside {
     border-radius: 0px 0px 10px 10px;
@@ -146,7 +153,7 @@ aside {
 
 aside > h3 {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    color: var(--cor-preta);
+    color: var(s);
     border-radius: 10px 10px 0px 0px;
     padding: 0;
 }
@@ -159,15 +166,14 @@ aside > ul {
 }
 
 footer {
-    background-color: var(--cor-preta);
-    color: var(--cor-branca);
+    background-color: var(--cabecalho-e-rodape);
+    color: var(--texto);
     text-align: center;
     padding: 10px;
 }
 
 footer a {
-    color: var(--cor-branca);
-
+    color: black;
 }
 
 p.cc, p.cc > a {
@@ -176,10 +182,10 @@ p.cc, p.cc > a {
 }
 
 @media screen and (max-width: 768px) {
-    /* div.grid-flex {
+    div.grid-flex {
         display: flex;
         flex-flow: column;
-    } */
+    }
     
 }
 
