@@ -13,8 +13,6 @@ body {
     min-width: 300px;
 }
 
-
-
 :root {
     --fundo: lightgray;
     --texto: #000000;
@@ -83,7 +81,6 @@ header > div.header-center > a.portal:hover, div > ul > li > a:hover, aside > ul
 
 .input {
     min-width: 100px;
-    max-width: 200px;
     margin-left: 3px;
     margin-right: 3px;
     height: 30px;
@@ -99,6 +96,8 @@ main, aside {
     text-align: justify;
 }
 
+
+
 h1 {
     color: var(--cor-subtitulo);
     text-align: center;
@@ -106,16 +105,18 @@ h1 {
     font-family: var(--fonte-titulo);
     font-weight: 700;
     font-size: 40px;
-    border-radius: 8px;
+    line-height: 1em;
 }
 
 p , li > p {
     font-family: var(--fonte-titulo);
+    color: var(--texto);
     text-indent: 20px;
     margin: 15px;
 }
 
 h2 {
+    text-align: center;
     font-family: var(--fonte-subtitulo);
     font-weight: 600;
     color: var(--cor-subtitulo);
@@ -125,16 +126,31 @@ h2 {
 
 img {
     max-width: 300px;
+    border: 1px solid black;
+}
+
+main > p > a {
+    color: rgb(0, 114, 114);
+    text-decoration: none;
+}
+
+main > p > a:hover {
+    background-color: rgba(0, 240, 240, 0.356);
+    color: rgb(0, 163, 163);
+    text-decoration: underline;
 }
 
 ul > li {
     list-style-type: none;
+    margin: 20px;
 }
 
-h3 {
+h3, aside > h3 {
     font-family: var(--fonte-subtitulo);
     font-weight: 600;
     margin: 20px 0px 20px 10px;
+    color: var(--cor-subtitulo);
+    padding: 0;
 }
 
 div.grid-flex {
@@ -165,8 +181,9 @@ aside {
 
 aside > h3 {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    color: var(s);
+    color: var(--cor-subtitulo);
     border-radius: 10px 10px 0px 0px;
+    font-weight: 600;
     padding: 0;
 }
 
