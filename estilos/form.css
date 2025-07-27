@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+main {
+    width: 98vw;
+    height: 500px;
+}
+
+section#formulario {
+    
+}

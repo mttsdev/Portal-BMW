@@ -36,6 +36,9 @@ header > div.navegacao > ul {
     gap: 20px;
 }
 
+ul > li {
+    list-style-type: none;
+}
 
 header > div > ul > li > a{
     color: #fff;
@@ -96,8 +99,6 @@ main, aside {
     text-align: justify;
 }
 
-
-
 h1 {
     color: var(--cor-subtitulo);
     text-align: center;
@@ -126,7 +127,6 @@ h2 {
 
 img {
     max-width: 300px;
-    border: 1px solid black;
 }
 
 main > p > a {
@@ -140,8 +140,7 @@ main > p > a:hover {
     text-decoration: underline;
 }
 
-ul > li {
-    list-style-type: none;
+main > ul > li {
     margin: 20px;
 }
 
